@@ -1,0 +1,53 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: aeb6ebf1288469194bb4936a64a55af18f555c9f3f81ec1df4b0ebc45bc92e0c
+
+name:           weight-recorder
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/shinofumijp/weight-recorder#readme>
+homepage:       https://github.com/shinofumijp/weight-recorder#readme
+bug-reports:    https://github.com/shinofumijp/weight-recorder/issues
+author:         shinofumijp
+maintainer:     fumiya.shinozuka@finc.com
+copyright:      2019 shinofumijp
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/shinofumijp/weight-recorder
+
+library
+  exposed-modules:
+      Entity.User
+      Entity.WeightRecord
+      Model.User
+      Model.WeightRecord
+  other-modules:
+      Paths_weight_recorder
+  hs-source-dirs:
+      src/
+  ghc-options: -Wall
+  build-depends:
+      HDBC
+    , HDBC-sqlite3
+    , Spock
+    , base >=4.7 && <5
+    , bcrypt
+    , bytestring
+    , filepath
+    , http-types
+    , mustache
+    , persistable-record
+    , relational-query
+    , relational-query-HDBC
+    , text
+    , time
+  default-language: Haskell2010
